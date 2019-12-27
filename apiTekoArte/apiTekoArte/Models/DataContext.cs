@@ -10,5 +10,7 @@ namespace apiTekoArte.Models
         {
 
         }
+
+        public System.Data.Entity.DbSet<apiTekoArte.Models.TekoArte> TekoArtes { get; set; }
     }
 }
