@@ -1,16 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="appTekoArte.Views.TekoArtePage">
+             x:Class="appTekoArte.Views.TekoArtePage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             >
   <ListView x:Name="MyListView"
-            ItemsSource="{Binding Items}"
-            ItemTapped="Handle_ItemTapped"
+            ItemsSource="{Binding TekoArte}"
+           
             CachingStrategy="RecycleElement">
             
     <!--Built in Cells-->
     <ListView.ItemTemplate>
         <DataTemplate>
-            <TextCell Text="{Binding .}" />
+            <TextCell Text="{Binding Painting}" />
         </DataTemplate>
     </ListView.ItemTemplate>
     
