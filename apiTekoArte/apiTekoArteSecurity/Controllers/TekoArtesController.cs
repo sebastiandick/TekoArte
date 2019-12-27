@@ -17,12 +17,14 @@ namespace apiTekoArteSecurity.Controllers
         private DataContext db = new DataContext();
 
         // GET: api/TekoArtes
+        [Authorize]
         public IQueryable<TekoArte> GetTekoArtes()
         {
             return db.TekoArtes;
         }
 
         // GET: api/TekoArtes/5
+        [Authorize]
         [ResponseType(typeof(TekoArte))]
         public IHttpActionResult GetTekoArte(int id)
         {
@@ -36,6 +38,7 @@ namespace apiTekoArteSecurity.Controllers
         }
 
         // PUT: api/TekoArtes/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutTekoArte(int id, TekoArte tekoArte)
         {
@@ -71,6 +74,7 @@ namespace apiTekoArteSecurity.Controllers
         }
 
         // POST: api/TekoArtes
+        [Authorize]
         [ResponseType(typeof(TekoArte))]
         public IHttpActionResult PostTekoArte(TekoArte tekoArte)
         {
@@ -86,6 +90,7 @@ namespace apiTekoArteSecurity.Controllers
         }
 
         // DELETE: api/TekoArtes/5
+        [Authorize]
         [ResponseType(typeof(TekoArte))]
         public IHttpActionResult DeleteTekoArte(int id)
         {
